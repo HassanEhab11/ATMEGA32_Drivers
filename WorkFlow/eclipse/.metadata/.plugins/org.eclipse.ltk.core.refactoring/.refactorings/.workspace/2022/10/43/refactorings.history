@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete 5 resources" deleteContents="false" description="Delete 5 resources" element1="/HW_ICU/WD_TIMER_config.h" element2="/HW_ICU/WD_TIMER_interface.h" element3="/HW_ICU/WD_TIMER_private.h" element4="/HW_ICU/WD_TIMER_prog.c" element5="/HW_ICU/WD_TIMER_register.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="5" stamp="1666019846668"/>&#x0A;<refactoring comment="Delete resource &apos;WATCHDOGTIMER/main.c&apos;" deleteContents="false" description="Delete resource &apos;WATCHDOGTIMER/main.c&apos;" element1="/WATCHDOGTIMER/main.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1666022339558"/>
+</session>

@@ -1,0 +1,41 @@
+20:33:52 **** Incremental Build of configuration Debug for project Timer_project ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:10:
+d:/sdk_win_64/sdk_win_64/sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:20: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Timer_project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Timer_project.map -mmcu=atmega32 -o "Timer_project.elf"  ./CLCD_prog.o ./DIO_prog.o ./KPD_prog.o ./PB_prog.o ./PORT_prog.o ./main.o   
+Finished building target: Timer_project.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Timer_project.elf  >"Timer_project.lss"
+Finished building: Timer_project.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Timer_project.elf  "Timer_project.hex"
+Finished building: Timer_project.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Timer_project.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   22970 bytes (70.1% Full)
+(.text + .data + .bootloader)
+
+Data:        322 bytes (15.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+20:33:53 Build Finished (took 862ms)
+

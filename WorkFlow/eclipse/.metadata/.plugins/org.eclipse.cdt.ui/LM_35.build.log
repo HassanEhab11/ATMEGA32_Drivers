@@ -1,0 +1,38 @@
+13:55:25 **** Incremental Build of configuration Debug for project LM_35 ****
+make all 
+Building file: ../PORT_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"PORT_prog.d" -MT"PORT_prog.o" -c -o "PORT_prog.o" "../PORT_prog.c"
+Finished building: ../PORT_prog.c
+ 
+Building target: LM_35.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,LM_35.map -mmcu=atmega32 -o "LM_35.elf"  ./ADC_prog.o ./CLCD_prog.o ./DIO_prog.o ./GIE_prog.o ./PORT_prog.o ./main.o   
+Finished building target: LM_35.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S LM_35.elf  >"LM_35.lss"
+Finished building: LM_35.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex LM_35.elf  "LM_35.hex"
+Finished building: LM_35.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LM_35.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9644 bytes (29.4% Full)
+(.text + .data + .bootloader)
+
+Data:        276 bytes (13.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:55:26 Build Finished (took 628ms)
+

@@ -1,0 +1,44 @@
+12:05:05 **** Incremental Build of configuration Debug for project EXTI ****
+make all 
+Building file: ../EXTI_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"EXTI_prog.d" -MT"EXTI_prog.o" -c -o "EXTI_prog.o" "../EXTI_prog.c"
+Finished building: ../EXTI_prog.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:12: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: EXTI.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,EXTI.map -mmcu=atmega32 -o "EXTI.elf"  ./DIO_prog.o ./EXTI_prog.o ./GIE_prog.o ./PORT_prog.o ./main.o   
+Finished building target: EXTI.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S EXTI.elf  >"EXTI.lss"
+Finished building: EXTI.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex EXTI.elf  "EXTI.hex"
+Finished building: EXTI.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 EXTI.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    2926 bytes (8.9% Full)
+(.text + .data + .bootloader)
+
+Data:          6 bytes (0.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+12:05:06 Build Finished (took 1s.286ms)
+

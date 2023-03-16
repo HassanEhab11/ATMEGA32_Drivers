@@ -1,0 +1,95 @@
+/*
+ * main.c
+ *
+ *  Created on: Oct 1, 2022
+ *      Author: hassa
+ */
+/************************ Delay ******************************/
+#include <util/delay.h>
+/***********************  LIB  *******************************/
+#include "STD_TYPES.h"
+#include "BIT_MATH.h"
+/************************ MCAL *******************************/
+#include "DIO_interface.h"
+#include "PORT_interface.h"
+
+/************************ HAL *********************************/
+#include "CLCD_interface.h"
+#include "KPD_interface.h"
+#include "SSD_interface.h"
+/*********************Global Variables *****************************/
+
+
+/************************ Main Prog *******************************/
+void main(void)
+{
+	/****************** Local Variables **************************/
+	u8 Local_u8Counter;
+	u8 Local_u8CalcArr[5];
+
+
+	/******************** Driver Init ***************************/
+	PORT_VoidInit();
+	CLCD_voidInit();
+
+
+
+	while(1)
+	{
+		CLCD_voidGoToXY(0,0);
+		CLCD_voidSendString("  Simple CalC");
+		CLCD_voidGoToXY(1,4);
+
+		for(Local_u8Counter=0;Local_u8Counter<5;Local_u8Counter++)
+			//	for(;;)
+		{
+			SSD_u8SingleNumDisplayBlink(Local_u8Counter);
+			do
+			{
+				Local_u8CalcArr[Local_u8Counter] = KPD_u8GetPressedKey();
+			}while(Local_u8CalcArr[Local_u8Counter]==0xff);
+			if(Local_u8CalcArr[Local_u8Counter] == '/'||Local_u8CalcArr[Local_u8Counter] =='*'||Local_u8CalcArr[Local_u8Counter] =='-'||Local_u8CalcArr[Local_u8Counter] =='+'||Local_u8CalcArr[Local_u8Counter] =='=')
+			{
+				CLCD_voidSendData(Local_u8CalcArr[Local_u8Counter]);
+				if(Local_u8CalcArr[Local_u8Counter] =='=')
+				{
+					switch(Local_u8CalcArr[1])
+					{
+					case '+':
+						Local_u8CalcArr[5] =Local_u8CalcArr[0]+Local_u8CalcArr[2];
+						CLCD_VoidWriteNumber(Local_u8CalcArr[5]);
+						break;
+					case '-':
+						Local_u8CalcArr[5] =Local_u8CalcArr[0]-Local_u8CalcArr[2];
+						CLCD_VoidWriteNumber(Local_u8CalcArr[5]);
+						break;
+					case '*':
+						Local_u8CalcArr[5] =Local_u8CalcArr[0]*Local_u8CalcArr[2];
+						CLCD_VoidWriteNumber(Local_u8CalcArr[5]);
+						break;
+					case '/':
+						Local_u8CalcArr[5] =Local_u8CalcArr[0]/Local_u8CalcArr[2];
+						CLCD_VoidWriteNumber(Local_u8CalcArr[5]);
+						break;
+					default:
+						CLCD_voidGoToXY(1,0);
+						CLCD_voidSendString("ERORR");
+						break;
+					}
+				}
+			}
+			else if(Local_u8CalcArr[Local_u8Counter] == 'c')
+			{
+				CLCD_voidClear();
+				break;
+			}
+			else
+			{
+				CLCD_VoidWriteNumber(Local_u8CalcArr[Local_u8Counter]);
+
+			}
+		}
+	}
+
+}
+

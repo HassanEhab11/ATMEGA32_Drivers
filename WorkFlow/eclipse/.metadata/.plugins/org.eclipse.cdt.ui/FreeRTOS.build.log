@@ -1,0 +1,87 @@
+09:48:01 **** Build of configuration Debug for project FreeRTOS ****
+make all 
+Building file: ../DIO_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DIO_prog.d" -MT"DIO_prog.o" -c -o "DIO_prog.o" "../DIO_prog.c"
+Finished building: ../DIO_prog.c
+ 
+Building file: ../PORT_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"PORT_prog.d" -MT"PORT_prog.o" -c -o "PORT_prog.o" "../PORT_prog.c"
+Finished building: ../PORT_prog.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:18: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building file: ../port.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"port.d" -MT"port.o" -c -o "port.o" "../port.c"
+Finished building: ../port.c
+ 
+Building file: ../queue.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"queue.d" -MT"queue.o" -c -o "queue.o" "../queue.c"
+Finished building: ../queue.c
+ 
+Building file: ../tasks.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"tasks.d" -MT"tasks.o" -c -o "tasks.o" "../tasks.c"
+../tasks.c: In function 'xTaskGenericCreate':
+../tasks.c:470: warning: cast from pointer to integer of different size
+../tasks.c:470: warning: cast to pointer from integer of different size
+Finished building: ../tasks.c
+ 
+Building file: ../timers.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"timers.d" -MT"timers.o" -c -o "timers.o" "../timers.c"
+Finished building: ../timers.c
+ 
+Building target: FreeRTOS.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,FreeRTOS.map -mmcu=atmega32 -o "FreeRTOS.elf"  ./DIO_prog.o ./PORT_prog.o ./croutine.o ./heap_1.o ./list.o ./main.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: FreeRTOS.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S FreeRTOS.elf  >"FreeRTOS.lss"
+Finished building: FreeRTOS.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex FreeRTOS.elf  "FreeRTOS.hex"
+Finished building: FreeRTOS.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 FreeRTOS.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11156 bytes (34.0% Full)
+(.text + .data + .bootloader)
+
+Data:       1159 bytes (56.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+09:48:02 Build Finished (took 1s.884ms)
+

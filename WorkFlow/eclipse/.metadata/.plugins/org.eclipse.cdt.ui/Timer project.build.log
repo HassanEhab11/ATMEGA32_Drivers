@@ -1,0 +1,18 @@
+15:17:55 **** Incremental Build of configuration Debug for project Timer project ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:10:
+d:/sdk_win_64/sdk_win_64/sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:19: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: Timer project.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Timer project.map -mmcu=atmega32 -o "Timer project.elf"  ./CLCD_prog.o ./DIO_prog.o ./KPD_prog.o ./PORT_prog.o ./main.o   
+avr-gcc.exe: project.map: No such file or directory
+make: *** [Timer project.elf] Error 1
+
+15:17:55 Build Finished (took 330ms)
+

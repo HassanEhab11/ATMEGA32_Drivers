@@ -1,0 +1,41 @@
+16:28:14 **** Incremental Build of configuration Debug for project HW_ICU ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:8:
+d:/sdk_win_64/sdk_win_64/sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:27: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: HW_ICU.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,HW_ICU.map -mmcu=atmega32 -o "HW_ICU.elf"  ./CLCD_prog.o ./DIO_prog.o ./GIE_prog.o ./PORT_prog.o ./TIMER_prog.o ./main.o   
+Finished building target: HW_ICU.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S HW_ICU.elf  >"HW_ICU.lss"
+Finished building: HW_ICU.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex HW_ICU.elf  "HW_ICU.hex"
+Finished building: HW_ICU.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 HW_ICU.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9704 bytes (29.6% Full)
+(.text + .data + .bootloader)
+
+Data:        301 bytes (14.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+16:28:15 Build Finished (took 744ms)
+

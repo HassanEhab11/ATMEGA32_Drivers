@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete 4 resources" deleteContents="false" description="Delete 4 resources" element1="/testdivers/KPD_config.h" element2="/testdivers/KPD_interface.h" element3="/testdivers/KPD_private.h" element4="/testdivers/KPD_prog.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="4" stamp="1664604646758"/>&#x0A;<refactoring comment="Rename resource &apos;Simple Calculator&apos; to &apos;Simple_Calculator&apos;" description="Rename resource &apos;Simple Calculator&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Simple Calculator" name="Simple_Calculator" stamp="1664607501601" updateReferences="true"/>
+</session>

@@ -1,0 +1,10 @@
+08:58:04 **** Incremental Build of configuration Debug for project Simple Calculator ****
+make all 
+Building target: Simple Calculator.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Simple Calculator.map -mmcu=atmega32 -o "Simple Calculator.elf"  ./CLCD_prog.o ./DIO_prog.o ./KPD_prog.o ./PORT_prog.o ./main.o   
+avr-gcc.exe: Calculator.map: No such file or directory
+make: *** [Simple Calculator.elf] Error 1
+
+08:58:05 Build Finished (took 346ms)
+

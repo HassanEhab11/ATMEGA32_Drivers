@@ -1,0 +1,20 @@
+09:41:53 **** Incremental Build of configuration Debug for project FREE_RTOS ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 FREE_RTOS.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   18424 bytes (56.2% Full)
+(.text + .data + .bootloader)
+
+Data:       1442 bytes (70.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+09:41:53 Build Finished (took 173ms)
+

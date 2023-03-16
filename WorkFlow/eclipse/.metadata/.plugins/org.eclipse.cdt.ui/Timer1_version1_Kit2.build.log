@@ -1,0 +1,40 @@
+07:59:20 **** Incremental Build of configuration Debug for project Timer1_version1_Kit2 ****
+make all 
+Building file: ../CLCD_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"CLCD_prog.d" -MT"CLCD_prog.o" -c -o "CLCD_prog.o" "../CLCD_prog.c"
+In file included from ../CLCD_prog.c:10:
+d:/sdk_win_64/sdk_win_64/sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../CLCD_prog.c
+ 
+Building target: Timer1_version1_Kit2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Timer1_version1_Kit2.map -mmcu=atmega32 -o "Timer1_version1_Kit2.elf"  ./ADC_prog.o ./CLCD_prog.o ./DIO_prog.o ./GIE_prog.o ./KPD_prog.o ./PORT_prog.o ./SSD_prog.o ./TIMER_prog.o ./main.o   
+Finished building target: Timer1_version1_Kit2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Timer1_version1_Kit2.elf  >"Timer1_version1_Kit2.lss"
+Finished building: Timer1_version1_Kit2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Timer1_version1_Kit2.elf  "Timer1_version1_Kit2.hex"
+Finished building: Timer1_version1_Kit2.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Timer1_version1_Kit2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   13544 bytes (41.3% Full)
+(.text + .data + .bootloader)
+
+Data:        315 bytes (15.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+07:59:21 Build Finished (took 752ms)
+

@@ -1,0 +1,40 @@
+17:58:00 **** Incremental Build of configuration Debug for project DIO ****
+make all 
+Building file: ../CLCD_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"CLCD_prog.d" -MT"CLCD_prog.o" -c -o "CLCD_prog.o" "../CLCD_prog.c"
+In file included from ../CLCD_prog.c:10:
+d:/sdk_win_64/sdk_win_64/sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../CLCD_prog.c
+ 
+Building target: DIO.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,DIO.map -mmcu=atmega32 -o "DIO.elf"  ./CLCD_prog.o ./CLCDtest.o ./DIO_prog.o ./LED_prog.o ./PB_prog.o ./SSD_prog.o ./main.o ./main1.o   
+Finished building target: DIO.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S DIO.elf  >"DIO.lss"
+Finished building: DIO.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex DIO.elf  "DIO.hex"
+Finished building: DIO.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 DIO.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12258 bytes (37.4% Full)
+(.text + .data + .bootloader)
+
+Data:         98 bytes (4.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:58:01 Build Finished (took 753ms)
+

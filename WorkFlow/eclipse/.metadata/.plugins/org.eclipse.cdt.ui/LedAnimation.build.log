@@ -1,0 +1,20 @@
+13:12:16 **** Incremental Build of configuration Release for project LedAnimation ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 LedAnimation.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:     670 bytes (2.0% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:12:16 Build Finished (took 172ms)
+

@@ -1,0 +1,41 @@
+13:11:13 **** Incremental Build of configuration Debug for project testdivers ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:8:
+d:/sdk_win_64/sdk_win_64/sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:40: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: testdivers.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,testdivers.map -mmcu=atmega32 -o "testdivers.elf"  ./ADC_prog.o ./CLCD_prog.o ./DIO_prog.o ./GIE_prog.o ./KPD_prog.o ./PORT_prog.o ./SSD_prog.o ./main.o   
+Finished building target: testdivers.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S testdivers.elf  >"testdivers.lss"
+Finished building: testdivers.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex testdivers.elf  "testdivers.hex"
+Finished building: testdivers.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 testdivers.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   14466 bytes (44.1% Full)
+(.text + .data + .bootloader)
+
+Data:        486 bytes (23.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:11:14 Build Finished (took 1s.145ms)
+

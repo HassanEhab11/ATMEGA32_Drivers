@@ -1,0 +1,43 @@
+16:48:41 **** Incremental Build of configuration Release for project CLCD2 ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:52: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: CLCD2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,CLCD2.map -mmcu=atmega32 -o "CLCD2.elf"  ./CLCD_prog.o ./DIO_prog.o ./PORT_prog.o ./main.o   
+Finished building target: CLCD2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S CLCD2.elf  >"CLCD2.lss"
+Finished building: CLCD2.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex CLCD2.elf  "CLCD2.hex"
+Finished building: CLCD2.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex CLCD2.elf  "CLCD2.eep"
+Finished building: CLCD2.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 CLCD2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    2022 bytes (6.2% Full)
+(.text + .data + .bootloader)
+
+Data:         16 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+16:48:43 Build Finished (took 2s.203ms)
+

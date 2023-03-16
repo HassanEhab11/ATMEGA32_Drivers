@@ -1,0 +1,36 @@
+05:01:58 **** Incremental Build of configuration Debug for project RTOS ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:19: warning: return type of 'main' is not 'int'
+Finished building: ../main.c
+ 
+Building target: RTOS.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,RTOS.map -mmcu=atmega32 -o "RTOS.elf"  ./CLCD_prog.o ./DIO_prog.o ./PORT_prog.o ./croutine.o ./heap_1.o ./list.o ./main.o ./port.o ./queue.o ./tasks.o ./timers.o   
+Finished building target: RTOS.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S RTOS.elf  >"RTOS.lss"
+Finished building: RTOS.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex RTOS.elf  "RTOS.hex"
+Finished building: RTOS.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 RTOS.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   18108 bytes (55.3% Full)
+(.text + .data + .bootloader)
+
+Data:       1411 bytes (68.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

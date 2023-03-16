@@ -1,0 +1,49 @@
+14:42:44 **** Incremental Build of configuration Release for project CLCD ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:51: warning: return type of 'main' is not 'int'
+../main.c: In function 'main':
+../main.c:63: warning: unused variable 'balldown'
+../main.c:62: warning: unused variable 'ballup'
+../main.c:61: warning: unused variable 'shape3'
+../main.c:60: warning: unused variable 'shape2'
+../main.c:59: warning: unused variable 'shape1'
+Finished building: ../main.c
+ 
+Building target: CLCD.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,CLCD.map -mmcu=atmega32 -o "CLCD.elf"  ./CLCD_prog.o ./DIO_prog.o ./main.o   
+Finished building target: CLCD.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S CLCD.elf  >"CLCD.lss"
+Finished building: CLCD.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex CLCD.elf  "CLCD.hex"
+Finished building: CLCD.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex CLCD.elf  "CLCD.eep"
+Finished building: CLCD.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 CLCD.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    2314 bytes (7.1% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+14:42:44 Build Finished (took 721ms)
+

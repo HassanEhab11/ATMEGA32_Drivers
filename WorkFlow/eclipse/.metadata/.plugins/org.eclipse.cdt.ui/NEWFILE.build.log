@@ -1,0 +1,43 @@
+10:09:40 **** Build of configuration Debug for project NEWFILE ****
+make all 
+Building file: ../CLCD_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"CLCD_prog.d" -MT"CLCD_prog.o" -c -o "CLCD_prog.o" "../CLCD_prog.c"
+In file included from ../CLCD_prog.c:10:
+d:/sdk_win_64/sdk_win_64/sdk_win_64/winavr/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../CLCD_prog.c
+ 
+Building file: ../DIO_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DIO_prog.d" -MT"DIO_prog.o" -c -o "DIO_prog.o" "../DIO_prog.c"
+Finished building: ../DIO_prog.c
+ 
+Building file: ../PORT_prog.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"PORT_prog.d" -MT"PORT_prog.o" -c -o "PORT_prog.o" "../PORT_prog.c"
+Finished building: ../PORT_prog.c
+ 
+Building file: ../croutine.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"croutine.d" -MT"croutine.o" -c -o "croutine.o" "../croutine.c"
+Finished building: ../croutine.c
+ 
+Building file: ../heap_1.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"heap_1.d" -MT"heap_1.o" -c -o "heap_1.o" "../heap_1.c"
+Finished building: ../heap_1.c
+ 
+Building file: ../list.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"list.d" -MT"list.o" -c -o "list.o" "../list.c"
+Finished building: ../list.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:15: warning: return type of 'main' is not 'int'
+../main.c:30: error: expected identifier or '(' before '{' token
+make: *** [main.o] Error 1
+
+10:09:43 Build Finished (took 2s.926ms)
+

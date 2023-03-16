@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete 4 resources" deleteContents="false" description="Delete 4 resources" element1="/FreeRTOS/CLCD_config.h" element2="/FreeRTOS/CLCD_interface.h" element3="/FreeRTOS/CLCD_private.h" element4="/FreeRTOS/CLCD_prog.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="4" stamp="1668671021754"/>&#x0A;<refactoring comment="Delete 4 resources" deleteContents="false" description="Delete 4 resources" element1="/RTOS/CLCD_config.h" element2="/RTOS/CLCD_interface.h" element3="/RTOS/CLCD_private.h" element4="/RTOS/CLCD_prog.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="4" stamp="1668677503807"/>
+</session>
