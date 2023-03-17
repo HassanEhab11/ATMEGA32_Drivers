@@ -1,7 +1,7 @@
-# ATMEGA32_Drivers
+# ATMEGA32_Drivers 🎯
 
 
-Please celebrate every achievement, no matter how small, and be happy with your progress believe me you are good. 
+## Please celebrate every achievement, no matter how small, and be happy with your progress believe me you are good.💚 
 
 Hello, my name is Hassan Ehab, and I'm passionate about embedded systems. This repository includes a part of my journey in learning about embedded systems.
 My hope is that this repository will be helpful for others who are also embarking on a similar journey.
