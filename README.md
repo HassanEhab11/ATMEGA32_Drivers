@@ -6,7 +6,7 @@
 Hello, my name is Hassan Ehab, and I'm passionate about embedded systems. This repository includes a part of my journey in learning about embedded systems.
 My hope is that this repository will be helpful for others who are also embarking on a similar journey.
 
-The repository contains projects, code samples, and other resources related to embedded systems that I've collected and developed over time. 
+The repository contains projects, code samples, and other resources related to embedded systems that I've developed over time. 
 These resources cover a range of topics, including microcontrollers, sensors, communication protocols, and more.
 
 I've always been fascinated by the potential of embedded systems to solve real-world problems, and I'm constantly learning and exploring new ideas in this field. 
