@@ -1,0 +1,68 @@
+/*
+ * TIMER2_config.h
+ *
+ * Created: 2/1/2023 2:19:33 PM
+ *  Author: hassa
+ */ 
+
+
+#ifndef TIMER2_CONFIG_H_
+#define TIMER2_CONFIG_H_
+
+/************** CRYSTAL_FREQ *************************/
+#define CRYSTAL_FREQ         16        // in MHZ
+/*********** COUNTER 0 ************/
+/*COUNTER_0_MODES:
+ *					1) COUNTER_2_FALLING_EDGE_MODE
+ *					2) COUNTER_2_RISING_EDGE_MODE
+ */
+#define COUNTER_2_MODE	COUNTER_2_FALLING_EDGE_MODE
+
+/*TIMER_2_MODES:
+ * 1) TIMER2_NORMAL_MODE
+ * 2) TIMER2_CTC_MODE
+ * 3) TIMER2_FAST_PWM
+ * 4) TIMER2_PHASE_CORRECT_PWM
+ *
+ * */
+#define TIMER2_MODE  TIMER2_FAST_PWM
+
+/*OC0_COMP_MATCH_PIN_MODES:
+ * 1) OC2_DISCONNECTED
+ * 2) OC2_TOGGLE
+ * 3) OC2_CLEAR
+ * 4) OC2_SET
+ * */
+#define OC2_MODE       OC2_CLEAR
+
+/*FAST_PWM_MODE:
+ * 1) FAST_PWM_INVERTED_MODE
+ * 2) FAST_PWM_NON_INVERTED_MODE
+ *
+ * */
+#define FAST_PWM_MODE    FAST_PWM_NON_INVERTED_MODE
+
+/*PHASE_CORRECT_PWM_MODE:
+ * 1) PHASE_CORRECT_PWM_INVERTED_MODE
+ * 2) PHASE_CORRECT_PWM_NON_INVERTED_MODE
+ *
+ * */
+#define PHASE_CORRECT_PWM_MODE    PHASE_CORRECT_PWM_NON_INVERTED_MODE
+
+/*
+ * 1) DIV_BY_1
+ * 2) DIV_BY_8
+ * 3) DIV_BY_64
+ * 4) DIV_BY_256
+ * 5) DIV_BY_1024
+ *
+ * */
+#define TIMER2_PRESCALLER_SELEC        DIV_BY_64
+
+
+
+
+
+
+
+#endif /* TIMER2_CONFIG_H_ */
