@@ -2,29 +2,42 @@
 /********************************************************************/
 /******************    Author     : Hassan Ehab *********************/
 /******************    Layer      : MCAL        *********************/
-/******************    SWC(Driver): DIO         *********************/
+/******************    SWC(Driver): SPI         *********************/
 /******************    Version    : 1.00        *********************/
+/******************    Date       : 25/10/2022  *********************/
 /********************************************************************/
 /********************************************************************/
 
-#ifndef DIO_REGISTER_H_
-#define DIO_REGISTER_H_
 
-#define  PORTA   *((volatile u8*)0x3B)
-#define  DDRA    *((volatile u8*)0x3A)
-#define  PINA    *((volatile u8*)0x39)
+#ifndef SPI_REGISTER_H_
+#define SPI_REGISTER_H_
+/****  SPI Control Register ****/
+#define  SPCR     *((volatile u8*)0x2D)
+#define  SPCR_SPIE    7                  /**  SPI Interrupt Enable     **/
+#define  SPCR_SPE     6                  /**        SPI Enable         **/
+#define  SPCR_DORD    5                  /**        Data Order         **/
+#define  SPCR_MSTR    4                  /**   Master/Slave Select     **/
+#define  SPCR_CPOL    3                  /**      Clock Polarity       **/
+#define  SPCR_CPHA    2                  /**        Clock Phase        **/
+#define  SPCR_SPR1    1                  /**  SPI Clock Rate Select  1 **/
+#define  SPCR_SPR0    0                  /**  SPI Clock Rate Select  0 **/
+/****  SPI Status Register  ****/
+#define  SPSR   *((volatile u8*)0x2E)
+#define  SPSR_SPIF    7                 /**    SPI Interrupt Flag     **/
+#define  SPSR_WCOL    6                 /**    Write COLlision Flag   **/
+#define  SPSR_SPI2X   0                 /**    Double SPI Speed Bit   **/
+/****  SPI Data Register    ****/
+#define  SPDR   *((volatile u8*)0x2F)
 
-#define  PORTB   *((volatile u8*)0x38)
-#define  DDRB    *((volatile u8*)0x37)
-#define  PINB    *((volatile u8*)0x36)
 
-#define  PORTC   *((volatile u8*)0x35)
-#define  DDRC    *((volatile u8*)0x34)
-#define  PINC    *((volatile u8*)0x33)
 
-#define  PORTD   *((volatile u8*)0x32)
-#define  DDRD    *((volatile u8*)0x31)
-#define  PIND    *((volatile u8*)0x30)
 
 
 #endif
+
+
+
+
+
+
+
