@@ -1,0 +1,22 @@
+HAL/HDCMOTOR/HDCMOTOR_program.o HAL/HDCMOTOR/HDCMOTOR_program.o:  \
+ ../HAL/HDCMOTOR/HDCMOTOR_program.c \
+  ../HAL/HDCMOTOR/../../LIB/LSTD_TYPES.h \
+  ../HAL/HDCMOTOR/../../LIB/LBIT_MATH.h \
+  ../HAL/HDCMOTOR/../../MCAL/MDIO/MDIO_interface.h \
+  ../HAL/HDCMOTOR/../../MCAL/MTIMER0/MTIMER0_interface.h \
+  ../HAL/HDCMOTOR/HDCMOTOR_private.h ../HAL/HDCMOTOR/HDCMOTOR_config.h \
+  ../HAL/HDCMOTOR/HDCMOTOR_interface.h
+
+../HAL/HDCMOTOR/../../LIB/LSTD_TYPES.h:
+
+../HAL/HDCMOTOR/../../LIB/LBIT_MATH.h:
+
+../HAL/HDCMOTOR/../../MCAL/MDIO/MDIO_interface.h:
+
+../HAL/HDCMOTOR/../../MCAL/MTIMER0/MTIMER0_interface.h:
+
+../HAL/HDCMOTOR/HDCMOTOR_private.h:
+
+../HAL/HDCMOTOR/HDCMOTOR_config.h:
+
+../HAL/HDCMOTOR/HDCMOTOR_interface.h:

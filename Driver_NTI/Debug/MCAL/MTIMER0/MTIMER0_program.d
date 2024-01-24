@@ -1,0 +1,19 @@
+MCAL/MTIMER0/MTIMER0_program.o MCAL/MTIMER0/MTIMER0_program.o:  \
+ ../MCAL/MTIMER0/MTIMER0_program.c ../MCAL/MTIMER0/../../LIB/LSTD_TYPES.h \
+  ../MCAL/MTIMER0/../../LIB/LBIT_MATH.h \
+  ../MCAL/MTIMER0/../../MCAL/MDIO/MDIO_interface.h \
+  ../MCAL/MTIMER0/../MTIMER0/MTIMER0_config.h \
+  ../MCAL/MTIMER0/../MTIMER0/MTIMER0_interface.h \
+  ../MCAL/MTIMER0/../MTIMER0/MTIMER0_private.h
+
+../MCAL/MTIMER0/../../LIB/LSTD_TYPES.h:
+
+../MCAL/MTIMER0/../../LIB/LBIT_MATH.h:
+
+../MCAL/MTIMER0/../../MCAL/MDIO/MDIO_interface.h:
+
+../MCAL/MTIMER0/../MTIMER0/MTIMER0_config.h:
+
+../MCAL/MTIMER0/../MTIMER0/MTIMER0_interface.h:
+
+../MCAL/MTIMER0/../MTIMER0/MTIMER0_private.h:
