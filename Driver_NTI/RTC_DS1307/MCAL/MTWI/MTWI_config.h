@@ -1,0 +1,14 @@
+#ifndef TWI_CONFIG_H_
+#define TWI_CONFIG_H_
+
+#define F_CPU 16000000UL
+
+/* SELECT FREQ :
+ * FREQ_400KBPS
+ * FREQ_100KBPS
+ */
+
+#define SELECTED_FREQ	FREQ_100KBPS
+
+
+#endif /* TWI_CONFIG_H_ */
