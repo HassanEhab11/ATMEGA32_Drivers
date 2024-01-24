@@ -1,0 +1,24 @@
+/*
+ * KEYPAD_private.h
+ *
+ * Created: 1/27/2023 12:52:26 AM
+ *  Author: hassa
+ */ 
+
+
+#ifndef KEYPAD_PRIVATE_H_
+#define KEYPAD_PRIVATE_H_
+
+#define COL_NUM      4
+#define ROW_NUM      4
+
+#define ROW_INIT	0
+#define COL_INIT	0
+
+u8 Row_Port_Arr[ROW_NUM] = {KEYPAD_R0_PORT, KEYPAD_R1_PORT, KEYPAD_R2_PORT, KEYPAD_R3_PORT};
+u8 Row_Pin_Arr[ROW_NUM] = {KEYPAD_R0_PIN, KEYPAD_R1_PIN, KEYPAD_R2_PIN, KEYPAD_R3_PIN};
+
+u8 Col_Port_Arr[COL_NUM] = {KEYPAD_C0_PORT, KEYPAD_C1_PORT, KEYPAD_C2_PORT, KEYPAD_C3_PORT};
+u8 Col_Pin_Arr[COL_NUM] = {KEYPAD_C0_PIN, KEYPAD_C1_PIN, KEYPAD_C2_PIN, KEYPAD_C3_PIN};
+
+#endif /* KEYPAD_PRIVATE_H_ */
